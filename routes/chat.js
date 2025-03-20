@@ -67,7 +67,7 @@ chatRouter.delete('/:id', async (req, res) => {
             return res.status(404).send('Chat not found');
         }
 
-        res.status(204)("Chat deleted successfully");
+        res.send("Chat deleted successfully");
     } catch (error) {
         console.error(error);
         res.status(500).send('error.message');
